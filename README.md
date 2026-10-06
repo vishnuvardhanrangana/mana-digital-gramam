@@ -97,6 +97,26 @@ npm run preview
 
 ---
 
+## ⚡ Cloudflare Pages Deployment (Free & Automated via GitHub)
+
+The website is fully optimized for **Cloudflare Pages Free Hosting** at clean root URLs like `https://mana-digital-gramam.pages.dev`:
+
+### Step-by-Step Cloudflare Pages Setup:
+1. Log in to your Cloudflare account at [https://dash.cloudflare.com/](https://dash.cloudflare.com/)
+2. In the left navigation, go to **Workers & Pages** -> **Create application** -> **Pages** -> **Connect to Git**.
+3. Select your GitHub account and authorize access to repository: **`vishnuvardhanrangana/mana-digital-gramam`**.
+4. Configure the build settings:
+   - **Project name**: `mana-digital-gramam` (desired URL: `https://mana-digital-gramam.pages.dev`)
+   - **Production branch**: `main`
+   - **Framework preset**: `Vite`
+   - **Build command**: `npm run build`
+   - **Build output directory**: `dist`
+   - **Root directory**: `/` (leave default)
+5. Click **"Save and Deploy"**.
+6. Cloudflare Pages will build the site, deploy it to edge servers worldwide, and assign the live `*.pages.dev` URL. Every subsequent `git push` to `main` will automatically trigger an instant preview and production deployment!
+
+---
+
 ## 🌐 GitHub Pages Deployment (Free & Automated)
 
 The website is configured for 100% free hosting on GitHub Pages via **GitHub Actions**.
