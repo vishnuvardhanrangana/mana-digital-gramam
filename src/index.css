@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-forest: #14452F;
+    --brand-forest-dark: #0D3322;
+    --brand-forest-light: #1A593D;
+    --brand-fresh: #059669;
+    --brand-fresh-light: #10B981;
+    --brand-earth: #C2410C;
+    --brand-sand: #D97706;
+    --bg-warm: #FAF8F5;
+    --card-border: #E8E4DA;
+    --text-primary: #1C241D;
+    --text-muted: #4B5563;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', 'Noto Sans Telugu', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-warm);
+    color: var(--text-primary);
+  }
+
+  /* Telugu text specific line-height and smoothness */
+  :lang(te) {
+    font-family: 'Noto Sans Telugu', 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.65;
+  }
+
+  /* Hindi text specific line-height and smoothness */
+  :lang(hi) {
+    font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.6;
+  }
+
+  /* Accessible focus indicators */
+  :focus-visible {
+    outline: 2px solid #059669;
+    outline-offset: 3px;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1ede5;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
